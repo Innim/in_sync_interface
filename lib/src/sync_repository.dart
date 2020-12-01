@@ -30,6 +30,16 @@ abstract class SyncRepository {
   /// On the next sync turn on - all entities will be synchronized from zero.
   Future<void> clearAll();
 
+  /// Mark that synchronization needs to be performed.
+  ///
+  /// Synchronization will be executed in an appropriate time soon.
+  ///
+  /// If you need to force sync to to start right now (usually not necessary)
+  /// and explicitly wait until it complete - use [synchronize].
+  void needSynchronize();
+
   /// Make synchronization with remote.
+  ///
+  /// It's preferable to use [needSynchronize].
   Future<void> synchronize();
 }

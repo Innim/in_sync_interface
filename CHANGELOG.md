@@ -1,3 +1,7 @@
+## [0.1.1] - 2020-12-01
+
+* Method `needSynchronize()`.
+
 ## [0.1.0+1] - 2020-07-14
 
 * Export to lib.

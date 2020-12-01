@@ -1,6 +1,6 @@
 name: in_sync_interface
 description: An interface for synchronization functional. Used by in_sync.
-version: 0.1.0+1
+version: 0.1.1
 homepage: https://github.com/innim/
 repository: https://github.com/Innim/flutter_remote_error
 issue_tracker: https://github.com/Innim/flutter_remote_error/issues
