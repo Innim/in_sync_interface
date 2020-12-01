@@ -1,3 +1,7 @@
+## [0.2.0] - 2020-12-02
+
+* Method `needSynchronize()`.
+
 ## [0.1.2] - 2020-12-02
 
 * Reverted method `needSynchronize()`. Need to increase minor version.
