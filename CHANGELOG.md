@@ -1,3 +1,8 @@
+## [0.3.0] - 2020-12-08
+
+* Method `enable()` now perform additional check and actions creations
+when sync already enabled.
+
 ## [0.2.0] - 2020-12-02
 
 * Method `needSynchronize()`.

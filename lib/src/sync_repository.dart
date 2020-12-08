@@ -15,7 +15,10 @@ abstract class SyncRepository {
   /// All exisiting entities will be processed and synced with the remote.
   /// It can take a while.
   ///
-  /// If sync already on - only sync attempt will be performed
+  /// If sync already on - method will check last modified entities,
+  /// to create actions if its didn't create becase of close of the app.
+  ///
+  /// After that sync attempt will be performed
   /// and sync in backgrond will be scheduled.
   Future<void> enable();
 
