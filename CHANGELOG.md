@@ -1,3 +1,7 @@
+## [1.0.0] - 2021-10-25
+
+* Null safety.
+
 ## [0.3.0] - 2020-12-08
 
 * Method `enable()` now perform additional check and actions creations
