@@ -45,4 +45,7 @@ abstract class SyncRepository {
   ///
   /// It's preferable to use [needSynchronize].
   Future<void> synchronize();
+
+  /// Used to release the memory allocated to variables when the repository is no longer in use.
+  Future<void> dispose();
 }
