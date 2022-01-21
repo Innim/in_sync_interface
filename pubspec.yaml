@@ -8,4 +8,5 @@ issue_tracker: https://github.com/Innim/flutter_remote_error/issues
 environment:
   sdk: '>=2.12.0 <3.0.0'
 
-flutter:
+dev_dependencies: 
+  innim_lint: ^0.2.0
