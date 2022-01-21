@@ -16,11 +16,14 @@ abstract class SyncRepository {
   /// It can take a while.
   ///
   /// If sync already on - method will check last modified entities,
-  /// to create actions if its didn't create becase of close of the app.
+  /// to create actions if its didn't create because of close of the app.
   ///
   /// After that sync attempt will be performed
   /// and sync in backgrond will be scheduled.
-  Future<void> enable();
+  ///
+  /// [userId] defines which user enable sync. If previously sync was enable
+  /// for different user, than all data will be cleared before start sync.
+  Future<void> enable(int userId);
 
   /// Turn of synchronization.
   Future<void> disable();

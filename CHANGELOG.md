@@ -1,3 +1,7 @@
+## [1.2.0] - 2022-01-21
+
+* Method `enable()` require `userId`.
+
 ## [1.1.0] - 2022-01-17
 
 * Method `dispose()`.
