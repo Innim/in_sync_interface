@@ -10,3 +10,4 @@ environment:
 
 dev_dependencies: 
   innim_lint: ^0.2.0
+  test: ^1.20.1
