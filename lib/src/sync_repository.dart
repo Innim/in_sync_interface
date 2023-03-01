@@ -49,6 +49,11 @@ abstract class SyncRepository {
   /// It's preferable to use [needSynchronize].
   Future<void> synchronize();
 
+  /// Specifies that modified data should not be sent.
+  /// As a rule, it is necessary for debugging
+  /// when authorizing with other people's data.
+  void debugDoNotSendChanges();
+
   /// Used to release the memory allocated to variables when the repository is no longer in use.
   Future<void> dispose();
 }

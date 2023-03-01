@@ -1,3 +1,7 @@
+## [1.2.1] - 2023-03-01
+
+* Add `debugDoNotSendChanges()` method.
+
 ## [1.2.0] - 2022-01-21
 
 * Method `enable()` require `userId`.
