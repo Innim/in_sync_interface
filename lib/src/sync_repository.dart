@@ -60,5 +60,5 @@ abstract class SyncRepository {
   Future<void> dispose();
 
   /// Returns the synchronization job status stream.
-  Stream<SyncStateInfo> state();
+  Stream<SyncStateInfo> get state;
 }
