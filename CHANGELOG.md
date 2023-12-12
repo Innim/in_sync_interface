@@ -1,3 +1,8 @@
+## [1.3.0] - 2023-12-12
+
+* Added class `SyncStateInfo` describing the current synchronization state and errors.
+* Add `state` getter.
+
 ## [1.2.1] - 2023-03-01
 
 * Add `debugDoNotSendChanges()` method.

@@ -1,3 +1,5 @@
+import 'package:in_sync_interface/src/sync_state_info.dart';
+
 /// The reposotory for work with synchronization.
 ///
 /// By default the synchronization is off (see. [isEnabled]),
@@ -56,4 +58,7 @@ abstract class SyncRepository {
 
   /// Used to release the memory allocated to variables when the repository is no longer in use.
   Future<void> dispose();
+
+  /// Returns the synchronization job status stream.
+  Stream<SyncStateInfo> get state;
 }
