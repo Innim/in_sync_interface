@@ -1,3 +1,7 @@
+## [1.3.0+1] - 2023-12-14
+
+* A class `SyncStateInfo` now abstract.
+
 ## [1.3.0] - 2023-12-12
 
 * Added class `SyncStateInfo` describing the current synchronization state and errors.

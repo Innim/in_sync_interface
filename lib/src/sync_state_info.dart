@@ -1,12 +1,7 @@
 /// Synchronization status information, including errors.
-class SyncStateInfo {
-  final SyncState state;
-  final SyncError? syncError;
-
-  const SyncStateInfo(
-    this.state, {
-    this.syncError,
-  });
+abstract class SyncStateInfo {
+  SyncState get state;
+  SyncError? get syncError;
 
   /// Fatal error.
   bool get isFatalError =>
