@@ -1,3 +1,7 @@
+## [1.3.1] - 2023-12-19
+
+* Add `lastSyncDate` getter.
+
 ## [1.3.0+1] - 2023-12-14
 
 * A class `SyncStateInfo` now abstract.

@@ -61,4 +61,7 @@ abstract class SyncRepository {
 
   /// Returns the synchronization job status stream.
   Stream<SyncStateInfo> get state;
+
+  /// Returns the date of the last synchronization with device time.
+  Future<DateTime?> get lastSyncDate;
 }
