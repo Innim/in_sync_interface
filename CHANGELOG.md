@@ -1,3 +1,7 @@
+## [1.4.0] - 2024-04-25
+
+* Add getter `errorData` in `SyncStateInfo`.
+
 ## [1.3.1] - 2023-12-19
 
 * Add `lastSyncDate` getter.
