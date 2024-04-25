@@ -2,6 +2,7 @@
 abstract class SyncStateInfo {
   SyncState get state;
   SyncError? get syncError;
+  Object? get errorData;
 
   /// Fatal error.
   bool get isFatalError =>
