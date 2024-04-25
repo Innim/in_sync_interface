@@ -1,4 +1,4 @@
-## [1.3.2] - 2024-04-25
+## [1.4.0] - 2024-04-25
 
 * Add getter `errorData` in `SyncStateInfo`.
 
