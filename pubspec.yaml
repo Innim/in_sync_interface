@@ -6,8 +6,8 @@ repository: https://github.com/Innim/in_sync_interface
 issue_tracker: https://github.com/Innim/in_sync_interface/issues
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=3.1.0 <4.0.0'
 
 dev_dependencies: 
-  innim_lint: ^0.3.1
+  innim_lint: ^0.5.0+1
   test: ^1.20.1

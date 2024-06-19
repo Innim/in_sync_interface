@@ -1,6 +1,8 @@
 ## [1.5.0] - 2024-06-19
 
 * **BREAKING** Renamed `SyncError`: `updateLinksExeption` -> `updateLinksException`.
+* Min Dart SDK `3.1.0`.
+* `innim_lint` v0.5.0.
 
 ## [1.4.0] - 2024-04-25
 
