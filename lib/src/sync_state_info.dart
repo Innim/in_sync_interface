@@ -78,6 +78,9 @@ enum SyncError {
   /// Internal error.
   internalError,
 
+  @Deprecated('Use updateLinksException. This is only for compatibility reason')
+  updateLinksExeption,
+
   /// Error updating links.
   updateLinksException,
 

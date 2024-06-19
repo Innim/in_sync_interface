@@ -1,6 +1,9 @@
-## [1.5.0] - 2024-06-19
 
-* **BREAKING** Renamed `SyncError`: `updateLinksExeption` -> `updateLinksException`.
+* Added deprecated `SyncError.updateLinksExeption` for compatibility with previous data from db.
+
+## [1.5.0]
+
+* Renamed `SyncError`: `updateLinksExeption` -> `updateLinksException`.
 * Min Dart SDK `3.1.0`.
 * `innim_lint` v0.5.0.
 
