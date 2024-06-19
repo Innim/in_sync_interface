@@ -1,3 +1,4 @@
+## [1.5.0+1]
 
 * Added deprecated `SyncError.updateLinksExeption` for compatibility with previous data from db.
 
@@ -7,60 +8,60 @@
 * Min Dart SDK `3.1.0`.
 * `innim_lint` v0.5.0.
 
-## [1.4.0] - 2024-04-25
+## [1.4.0]
 
 * Add getter `errorData` in `SyncStateInfo`.
 
-## [1.3.1] - 2023-12-19
+## [1.3.1]
 
 * Add `lastSyncDate` getter.
 
-## [1.3.0+1] - 2023-12-14
+## [1.3.0+1]
 
 * A class `SyncStateInfo` now abstract.
 
-## [1.3.0] - 2023-12-12
+## [1.3.0]
 
 * Added class `SyncStateInfo` describing the current synchronization state and errors.
 * Add `state` getter.
 
-## [1.2.1] - 2023-03-01
+## [1.2.1]
 
 * Add `debugDoNotSendChanges()` method.
 
-## [1.2.0] - 2022-01-21
+## [1.2.0]
 
 * Method `enable()` require `userId`.
 
-## [1.1.0] - 2022-01-17
+## [1.1.0]
 
 * Method `dispose()`.
 
-## [1.0.0] - 2021-10-25
+## [1.0.0]
 
 * Null safety.
 
-## [0.3.0] - 2020-12-08
+## [0.3.0]
 
 * Method `enable()` now perform additional check and actions creations
 when sync already enabled.
 
-## [0.2.0] - 2020-12-02
+## [0.2.0]
 
 * Method `needSynchronize()`.
 
-## [0.1.2] - 2020-12-02
+## [0.1.2]
 
 * Reverted method `needSynchronize()`. Need to increase minor version.
 
-## [0.1.1] - 2020-12-01
+## [0.1.1]
 
 * Method `needSynchronize()`.
 
-## [0.1.0+1] - 2020-07-14
+## [0.1.0+1]
 
 * Export to lib.
 
-## [0.1.0] - 2020-07-14
+## [0.1.0]
 
 * Base interface for `SyncRepository`.
