@@ -1,3 +1,7 @@
+## [1.5.0] - 2024-06-19
+
+* **BREAKING** Renamed `SyncError`: `updateLinksExeption` -> `updateLinksException`.
+
 ## [1.4.0] - 2024-04-25
 
 * Add getter `errorData` in `SyncStateInfo`.

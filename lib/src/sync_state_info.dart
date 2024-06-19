@@ -69,7 +69,7 @@ enum SyncError {
   /// Network error.
   networkError,
 
-  /// Authorisation error.
+  /// Authorization error.
   authError,
 
   /// Temporary server error.
@@ -79,7 +79,7 @@ enum SyncError {
   internalError,
 
   /// Error updating links.
-  updateLinksExeption,
+  updateLinksException,
 
   /// Unknown error.
   unknown,
