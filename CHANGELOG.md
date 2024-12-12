@@ -1,3 +1,7 @@
+## [1.5.1]
+
+* Added `WaitSyncHandler` interface.
+
 ## [1.5.0+1]
 
 * Added deprecated `SyncError.updateLinksExeption` for compatibility with previous data from db.
