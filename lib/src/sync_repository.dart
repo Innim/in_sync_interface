@@ -64,4 +64,11 @@ abstract class SyncRepository {
 
   /// Returns the date of the last synchronization with device time.
   Future<DateTime?> get lastSyncDate;
+
+  /// Returns the date of the last successful synchronization complete
+  /// with device time.
+  ///
+  /// Synchronization is considered complete if there is nothing
+  /// to send to the server and nothing to take from it, including files.
+  Future<DateTime?> get lastSyncCompletedDate;
 }
