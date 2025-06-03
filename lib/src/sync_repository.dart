@@ -63,5 +63,17 @@ abstract class SyncRepository {
   Stream<SyncStateInfo> get state;
 
   /// Returns the date of the last synchronization with device time.
+  /// 
+  /// This is the most recent date when a chunk of data was received from the server.
+  /// It does not indicate whether a full sync occurred —
+  /// meaning both sending all local data and receiving all server data.
+  /// See [lastSyncCompletedDate] for the time of the last successful full sync.
   Future<DateTime?> get lastSyncDate;
+
+  /// Returns the date of the last successful synchronization complete
+  /// with device time.
+  ///
+  /// Synchronization is considered complete if there is nothing
+  /// to send to the server and nothing to take from it, including files.
+  Future<DateTime?> get lastSyncCompletedDate;
 }
