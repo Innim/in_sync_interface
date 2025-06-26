@@ -1,6 +1,10 @@
+## [1.6.0]
+
+* Added parameter `manual` to `synchronize()` method.
+
 ## [1.5.1]
 
-* Add `lastSyncCompletedDate` getter.
+* Added `lastSyncCompletedDate` getter.
 
 ## [1.5.0+1]
 
@@ -14,11 +18,11 @@
 
 ## [1.4.0]
 
-* Add getter `errorData` in `SyncStateInfo`.
+* Added getter `errorData` in `SyncStateInfo`.
 
 ## [1.3.1]
 
-* Add `lastSyncDate` getter.
+* Added `lastSyncDate` getter.
 
 ## [1.3.0+1]
 
@@ -27,11 +31,11 @@
 ## [1.3.0]
 
 * Added class `SyncStateInfo` describing the current synchronization state and errors.
-* Add `state` getter.
+* Added `state` getter.
 
 ## [1.2.1]
 
-* Add `debugDoNotSendChanges()` method.
+* Added `debugDoNotSendChanges()` method.
 
 ## [1.2.0]
 

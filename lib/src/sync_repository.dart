@@ -49,7 +49,10 @@ abstract class SyncRepository {
   /// Make synchronization with remote.
   ///
   /// It's preferable to use [needSynchronize].
-  Future<void> synchronize();
+  ///
+  /// If [manual] is `true`, it means that the synchronization
+  /// was initiated by the user, and has a higher priority.
+  Future<void> synchronize({bool manual = false});
 
   /// Specifies that modified data should not be sent.
   /// As a rule, it is necessary for debugging
@@ -63,7 +66,7 @@ abstract class SyncRepository {
   Stream<SyncStateInfo> get state;
 
   /// Returns the date of the last synchronization with device time.
-  /// 
+  ///
   /// This is the most recent date when a chunk of data was received from the server.
   /// It does not indicate whether a full sync occurred —
   /// meaning both sending all local data and receiving all server data.
