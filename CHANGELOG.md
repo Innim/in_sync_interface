@@ -1,3 +1,8 @@
+## [1.7.0]
+
+* Added enum `SyncFilesState` with possible file synchronization statuses.
+* Added `SyncStateInfo.syncFilesState` getter.
+
 ## [1.6.0]
 
 * Added parameter `manual` to `synchronize()` method.
