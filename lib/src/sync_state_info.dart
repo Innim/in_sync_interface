@@ -1,6 +1,7 @@
 /// Synchronization status information, including errors.
 abstract class SyncStateInfo {
   SyncState get state;
+  SyncFilesState get syncFilesState;
   SyncError? get syncError;
   Object? get errorData;
 
@@ -107,4 +108,25 @@ enum SyncState {
 
   /// Waiting for first synchronization.
   waiting,
+}
+
+/// Files sync status.
+enum SyncFilesState {
+  // Initialization.
+  initializing,
+
+  // Synchronization was not performed.
+  none,
+
+  /// Synchronization in progress.
+  pending,
+
+  // Synchronization was completed successfully.
+  ok,
+
+  // The last synchronization attempt failed with an error.
+  failed,
+
+  // Synchronization is disabled.
+  disabled,
 }
