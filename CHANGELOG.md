@@ -1,3 +1,7 @@
+## [1.8.0]
+
+* More detailed synchronization status and upload progress.
+
 ## [1.7.0]
 
 * Added enum `SyncFilesState` with possible file synchronization statuses.

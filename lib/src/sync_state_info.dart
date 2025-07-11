@@ -4,6 +4,7 @@ abstract class SyncStateInfo {
   SyncFilesState get syncFilesState;
   SyncError? get syncError;
   Object? get errorData;
+  double? get uploadProgress;
 
   /// Fatal error.
   bool get isFatalError =>
@@ -103,8 +104,14 @@ enum SyncState {
   /// Synchronization is disabled.
   disabled,
 
-  /// Synchronization in progress.
-  pending,
+  /// Synchronization at the time sync stage.
+  timeSync,
+
+  /// Synchronization at the data uploading stage.
+  upload,
+
+  /// Synchronization at the data download stage.
+  download,
 
   /// Waiting for first synchronization.
   waiting,
