@@ -1,10 +1,12 @@
+import 'package:in_sync_interface/in_sync_interface.dart';
+
 /// Synchronization status information, including errors.
 abstract class SyncStateInfo {
   SyncState get state;
   SyncFilesState get syncFilesState;
+  SyncDataInfo get dataInfo;
   SyncError? get syncError;
   Object? get errorData;
-  double? get uploadProgress;
 
   /// Fatal error.
   bool get isFatalError =>
@@ -107,11 +109,8 @@ enum SyncState {
   /// Synchronization at the time sync stage.
   timeSync,
 
-  /// Synchronization at the data uploading stage.
-  upload,
-
-  /// Synchronization at the data download stage.
-  download,
+  /// Synchronization in progress.
+  pending,
 
   /// Waiting for first synchronization.
   waiting,
