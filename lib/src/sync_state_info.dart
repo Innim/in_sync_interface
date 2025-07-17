@@ -106,9 +106,6 @@ enum SyncState {
   /// Synchronization is disabled.
   disabled,
 
-  /// Synchronization at the time sync stage.
-  timeSync,
-
   /// Synchronization in progress.
   pending,
 
