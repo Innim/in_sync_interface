@@ -1,3 +1,9 @@
+## [1.8.0]
+
+* More detailed synchronization status and send changes progress.
+   * Added enum `SyncDataState` with detailed data synchronization status.
+   * Added `SyncStateInfo.dataInfo` getter.
+
 ## [1.7.0]
 
 * Added enum `SyncFilesState` with possible file synchronization statuses.

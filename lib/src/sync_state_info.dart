@@ -1,7 +1,10 @@
+import 'package:in_sync_interface/in_sync_interface.dart';
+
 /// Synchronization status information, including errors.
 abstract class SyncStateInfo {
   SyncState get state;
   SyncFilesState get syncFilesState;
+  SyncDataInfo get dataInfo;
   SyncError? get syncError;
   Object? get errorData;
 
