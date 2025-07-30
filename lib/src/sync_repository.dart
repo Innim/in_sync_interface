@@ -66,7 +66,17 @@ abstract class SyncRepository {
   /// Used to release the memory allocated to variables when the repository is no longer in use.
   Future<void> dispose();
 
-  /// Returns the synchronization job status stream.
+  /// Returns the current synchronization state.
+  ///
+  /// See also [state].
+  SyncStateInfo get currentState;
+
+  /// Returns the synchronization status stream.
+  ///
+  /// Take into account that you won't receive the current state immediately,
+  /// only the following changes.
+  ///
+  /// See also [currentState].
   Stream<SyncStateInfo> get state;
 
   /// Returns the date of the last synchronization with device time.

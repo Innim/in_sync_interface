@@ -1,3 +1,7 @@
+## [1.9.1]
+
+* Added `currentState` getter: returns current state of synchronization.
+
 ## [1.9.0]
 
 * **ATTENTION** Behavior change: `enable()` method now should not wait for synchronization to complete by default.
