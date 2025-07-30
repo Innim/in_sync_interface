@@ -14,8 +14,12 @@ abstract class SyncRepository {
 
   /// Turn on synchronization.
   ///
-  /// All existing entities will be processed and synced with the remote.
-  /// It can take a while.
+  /// All existing entities will be processed (if there is a lot of them,
+  /// this can take a while).
+  ///
+  /// After that, synchronization will be started.
+  /// If [waitForSync] is `true`, the method will wait until the synchronization
+  /// is completed before returning. It can take a long time, so it is not recommended.
   ///
   /// If sync already on - method will check last modified entities,
   /// to create actions if its didn't create because of close of the app.
@@ -25,7 +29,7 @@ abstract class SyncRepository {
   ///
   /// [userId] defines which user enable sync. If previously sync was enable
   /// for different user, than all data will be cleared before start sync.
-  Future<void> enable(int userId);
+  Future<void> enable(int userId, {bool waitForSync = false});
 
   /// Turn of synchronization.
   Future<void> disable();

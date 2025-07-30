@@ -1,3 +1,8 @@
+## [1.9.0]
+
+* **ATTENTION** Behavior change: `enable()` method now should not wait for synchronization to complete by default.
+* Added `waitForSync` parameter to `enable()` method.
+
 ## [1.8.0]
 
 * More detailed synchronization status and send changes progress.
