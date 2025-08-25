@@ -8,6 +8,13 @@ abstract class SyncStateInfo {
   SyncError? get syncError;
   Object? get errorData;
 
+  /// Date of last successful full sync completion.
+  DateTime? get syncCompletedDate;
+
+  /// Defines whether the state is final or
+  /// some part of the synchronization process is still in progress.
+  bool get isPending;
+
   /// Fatal error.
   bool get isFatalError =>
       syncError == SyncError.authIncorrectCriticalVersion ||

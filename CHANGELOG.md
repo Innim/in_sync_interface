@@ -1,3 +1,7 @@
+## [1.10.0]
+
+* Added `isPending` and `syncCompletedDate` fields in `SyncStateInfo`.
+
 ## [1.9.1]
 
 * Added `currentState` getter: returns current state of synchronization.
