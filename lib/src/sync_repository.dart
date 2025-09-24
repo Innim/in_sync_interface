@@ -93,4 +93,7 @@ abstract class SyncRepository {
   /// Synchronization is considered complete if there is nothing
   /// to send to the server and nothing to take from it, including files.
   Future<DateTime?> get lastSyncCompletedDate;
+
+  /// Checks whether synchronization needs to be performed.
+  Future<bool> isSyncNeeded();
 }

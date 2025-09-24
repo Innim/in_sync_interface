@@ -1,3 +1,7 @@
+## [1.10.1]
+
+* Added `isSyncNeeded()` method.
+
 ## [1.10.0]
 
 * Added `isPending` and `syncCompletedDate` fields in `SyncStateInfo`.
