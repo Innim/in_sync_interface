@@ -94,6 +94,14 @@ abstract class SyncRepository {
   /// to send to the server and nothing to take from it, including files.
   Future<DateTime?> get lastSyncCompletedDate;
 
-  /// Checks whether synchronization needs to be performed.
-  Future<bool> isSyncNeeded();
+  /// Checks whether all local data and associated files are fully synchronized with the remote.
+  ///
+  /// Returns `false` if no new local changes have been made since the last synchronization
+  /// and there is no new data or file to upload to the remote.
+  ///
+  ///
+  /// This method **does not** check the remote for new updates
+  /// and does **not** consider the download status of data or files from the remote.
+  /// It only evaluates the local state against the last known synchronization.
+  Future<bool> hasUnsyncedChanges();
 }

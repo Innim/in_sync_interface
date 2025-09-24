@@ -1,6 +1,6 @@
-## [1.10.1]
+## [1.11.0]
 
-* Added `isSyncNeeded()` method.
+* Added `hasUnsyncedChanges()` method.
 
 ## [1.10.0]
 
