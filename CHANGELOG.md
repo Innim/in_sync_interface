@@ -1,3 +1,7 @@
+## [1.11.0]
+
+* Added `hasUnsyncedChanges()` method.
+
 ## [1.10.0]
 
 * Added `isPending` and `syncCompletedDate` fields in `SyncStateInfo`.
