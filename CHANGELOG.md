@@ -1,3 +1,9 @@
+## [1.12.0]
+
+* Added new `SyncError` values:
+   * `clientTimeout`:  Interrupted by client timeout.
+   * `syncIsNotActive`: Synchronization is not active. Sync was disabled during or before the attempt.
+
 ## [1.11.0]
 
 * Added `hasUnsyncedChanges()` method.

@@ -95,6 +95,14 @@ enum SyncError {
   /// Error updating links.
   updateLinksException,
 
+  /// Interrupted by client timeout.
+  clientTimeout,
+
+  /// Synchronization is not active.
+  ///
+  /// Sync was disabled during or before the attempt.
+  syncIsNotActive,
+
   /// Unknown error.
   unknown,
 }
