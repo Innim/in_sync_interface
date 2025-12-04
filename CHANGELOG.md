@@ -1,3 +1,9 @@
+## [1.12.1]
+
+* Method `pause()`.
+* Method `resume()`.
+* Added `isPaused` getter.
+
 ## [1.12.0]
 
 * Added new `SyncError` values:
