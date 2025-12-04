@@ -13,9 +13,6 @@ abstract class SyncRepository {
   Future<bool> get isEnabled;
 
   /// `true` if synchronization is paused.
-  ///
-  /// If synchronization is off, all sync calls and entities changes
-  /// will be ignored.
   bool get isPaused;
 
   /// Turn on synchronization.
@@ -115,7 +112,7 @@ abstract class SyncRepository {
   /// Background synchronization will also be stopped.
   Future<void> pause();
 
-  /// Removes synchronization from pause.
+  /// Resumes paused synchronization.
   ///
   /// Unlike [enable], it does not process entities, but only unlocks synchronization.
   /// Background synchronization will also be started.
