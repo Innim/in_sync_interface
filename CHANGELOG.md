@@ -1,4 +1,4 @@
-## [1.12.1]
+## [1.13.0]
 
 * Method `pause()`.
 * Method `resume()`.
