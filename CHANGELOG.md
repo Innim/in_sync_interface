@@ -1,3 +1,11 @@
+## [1.14.0]
+
+* Added `SyncState.startFailed`: dispatched when `enable()` couldn't complete the startup sequence (e.g. descriptor check failed due to a network or server error). Call `enable()` again to retry.
+* Added `SyncState.awaitingConflictResolution`: sync is paused while the registered `DescriptorConflictResolver` waits for the user to resolve a dataset conflict.
+* Added `SyncError.descriptorMismatch`: client's dataset descriptor doesn't match the server's and the auto-rules couldn't reconcile it.
+* Added `DescriptorConflictResolver` and `DescriptorConflictInfo`: UX-level handler for dataset descriptor conflicts.
+* Added `SyncRepository.setDescriptorConflictResolver()` to register/unregister the resolver.
+
 ## [1.13.0]
 
 * Method `pause()`.

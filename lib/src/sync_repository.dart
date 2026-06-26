@@ -1,3 +1,4 @@
+import 'package:in_sync_interface/src/descriptor_conflict_resolver.dart';
 import 'package:in_sync_interface/src/sync_state_info.dart';
 
 /// The repository for work with synchronization.
@@ -32,6 +33,10 @@ abstract class SyncRepository {
   ///
   /// [userId] defines which user enable sync. If previously sync was enable
   /// for different user, than all data will be cleared before start sync.
+  ///
+  /// Calling this method again is also the way to recover from
+  /// [SyncState.startFailed] — repeating [enable] retries the startup
+  /// sequence that failed previously.
   Future<void> enable(int userId, {bool waitForSync = false});
 
   /// Turn of synchronization.
@@ -59,6 +64,10 @@ abstract class SyncRepository {
   ///
   /// If [manual] is `true`, it means that the synchronization
   /// was initiated by the user, and has a higher priority.
+  ///
+  /// This method does **not** auto-recover from [SyncState.startFailed].
+  /// To retry the startup sequence after a failed [enable], the caller
+  /// must invoke [enable] again.
   Future<void> synchronize({bool manual = false});
 
   /// Specifies that modified data should not be sent.
@@ -117,4 +126,13 @@ abstract class SyncRepository {
   /// Unlike [enable], it does not process entities, but only unlocks synchronization.
   /// Background synchronization will also be started.
   Future<void> resume();
+
+  /// Registers a resolver for dataset descriptor conflicts (rule 3 in the
+  /// descriptor protocol). Pass `null` to unregister.
+  ///
+  /// Should be called before [enable].
+  ///
+  /// If a conflict is already pending when a resolver is registered,
+  /// the resolver is notified immediately.
+  void setDescriptorConflictResolver(DescriptorConflictResolver? resolver);
 }

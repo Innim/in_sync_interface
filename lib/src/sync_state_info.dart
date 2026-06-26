@@ -103,6 +103,12 @@ enum SyncError {
   /// Sync was disabled during or before the attempt.
   syncIsNotActive,
 
+  /// Dataset descriptor mismatch between client and server.
+  ///
+  /// The client's descriptor doesn't match the server's, and the rules
+  /// could not silently reconcile.
+  descriptorMismatch,
+
   /// Unknown error.
   unknown,
 }
@@ -126,6 +132,22 @@ enum SyncState {
 
   /// Waiting for first synchronization.
   waiting,
+
+  /// Sync failed to start.
+  ///
+  /// [enable] was called but the startup sequence could not complete
+  /// (e.g. descriptor check failed due to a network or server error).
+  /// Call [enable] again to retry.
+  startFailed,
+
+  /// Waiting for the user to resolve a dataset conflict.
+  ///
+  /// The local and server datasets are independent: they have no shared
+  /// history, so the engine cannot decide which one to keep. The
+  /// registered [DescriptorConflictResolver] has been notified and sync
+  /// is paused until the resolver calls `resolve(merge: ...)`. After
+  /// the user responds, the state transitions to the next phase.
+  awaitingConflictResolution,
 }
 
 /// Files sync status.
